@@ -6,6 +6,7 @@ const Hero = () => {
     const navigate = useNavigate()
   return (
     <div className='px-4 sm:px-20 xl:px-32 relative inline-flex flex-col w-full justify-center bg-cover bg-no-repeat min-h-screen'>
+        
 
         <div className='text-center mb-6'>
             <h1 className='text-3xl sm:text-5xl md:text-6xl 2xl:text-7xl

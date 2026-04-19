@@ -14,6 +14,24 @@ const LoginForm = ({ role, title, subtitle }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+
+        
+
+        try {
+            const res = await Axis3DIcon.post("http://127.0.0.1:8000/api/login/",{
+                email,password
+            });
+
+            console.log(res.data);
+
+            localStorage.setItem("token",res.data.token);
+
+            
+            
+        } catch (error) {
+            console.error(err.response?.data);
+
+        } 
     }
 
 

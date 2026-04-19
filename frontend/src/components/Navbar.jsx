@@ -17,17 +17,17 @@ const Navbar = () => {
             {/* Buttons */}
             <div className='flex gap-3'>
                 <button 
-                    onClick={() => navigate("/login/admin")}
+                    onClick={() => navigate("/login")}
                     className='px-4 py-1 border rounded hover:bg-gray-200'
                 >
-                    Admin Sign In
+                    Signup
                 </button>
 
                 <button 
-                    onClick={() => navigate("/login/user")}
+                    onClick={() => navigate("/login")}
                     className='px-4 py-1 bg-blue-900 text-white rounded bg-blue-900'
                 >
-                    User Sign In
+                    Login
                 </button>
             </div>
 
