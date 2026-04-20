@@ -6,10 +6,12 @@ from rest_framework.views import APIView
 from django.contrib.auth import get_user_model
 from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import RegisterSerializer
+from rest_framework.permissions import AllowAny
 # Create your views here.
 User=get_user_model()
 
 class Regsiter_view(APIView):
+    permission_classes=[AllowAny]
     def post(self,request):
         serializer=RegisterSerializer(data=request.data)
         if serializer.is_valid():

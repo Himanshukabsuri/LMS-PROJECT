@@ -10,8 +10,8 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/login' element={<LoginLoading/>} />
-      <Route path='/login/admin' element={<LoginForm role="admin" title="Admin Portal" subtitle = "Sign in to manage the organization."/>} />
-      <Route path='/login/user' element={<LoginForm role="user" title="User Portal" subtitle = "Sign in to access the account."/>} />
+      <Route path='/login/admin' element={<LoginForm role="librarian" title="Admin Portal" subtitle = "Sign in to manage the organization."/>} />
+      <Route path='/login/user' element={<LoginForm role="student" title="User Portal" subtitle = "Sign in to access the account."/>} />
     </Routes>
     </>
   )

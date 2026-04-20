@@ -5,7 +5,7 @@ import axios from 'axios'
 import { ArrowLeftIcon, EyeIcon, EyeOffIcon, Loader2Icon } from 'lucide-react'
 
 const LoginForm = ({ role, title, subtitle }) => {
-
+    console.log(role)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [showPassword, setShowPassword] = useState(false)
@@ -20,12 +20,16 @@ const LoginForm = ({ role, title, subtitle }) => {
 
         try {
             const res = await axios.post("http://127.0.0.1:8000/api/login/",{
-                email,password
+                email,password,role
             });
 
             console.log(res.data);
 
-            localStorage.setItem("token",res.data.token);
+            localStorage.setItem("token", res.data.access);
+
+                const token = localStorage.getItem("token");
+
+                console.log(token);
 
             
             
