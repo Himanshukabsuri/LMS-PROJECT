@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import LoginLeft from './LoginLeft'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 import { ArrowLeftIcon, EyeIcon, EyeOffIcon, Loader2Icon } from 'lucide-react'
 
 const LoginForm = ({ role, title, subtitle }) => {
@@ -18,7 +19,7 @@ const LoginForm = ({ role, title, subtitle }) => {
         
 
         try {
-            const res = await Axis3DIcon.post("http://127.0.0.1:8000/api/login/",{
+            const res = await axios.post("http://127.0.0.1:8000/api/login/",{
                 email,password
             });
 
