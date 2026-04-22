@@ -43,7 +43,7 @@ It helps in maintaining records of books, members, and transactions.
         </div>
       </div>
       <p className="pt-4 text-center text-xs md:text-sm pb-5">
-        Copyright 2025 © Quick-AI. All Rights Reserved.
+        Copyright 2025 © Gurukul. All Rights Reserved.
       </p>
     </footer>
   );
