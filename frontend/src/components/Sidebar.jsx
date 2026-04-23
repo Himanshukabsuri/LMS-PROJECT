@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { href, Link, useLocation } from 'react-router-dom'
 import { dummyProfileData } from '../assets/assets.jsx'
-import { LayoutGridIcon, UserIcon, XIcon , ChevronRightIcon ,LogOutIcon, MenuIcon,SettingsIcon } from 'lucide-react'
+import { LayoutGridIcon, UserIcon, XIcon , ChevronRightIcon ,LogOutIcon, MenuIcon,SettingsIcon, BookUserIcon, Users } from 'lucide-react'
 
 const Sidebar = () => {
 
@@ -17,15 +17,22 @@ const Sidebar = () => {
         setMobileOpen(false)
     },[pathname])
 
-    const role = "ADMIN"
+    const role = "ADMIN" || "USER"
 
    const navItems = [
         {
             name:"Dashboard", href:"/dashboard",icon:LayoutGridIcon
         }, role === "ADMIN" ? 
         {
-            name:"User", href:"/user",icon:UserIcon
+            name:"AddBooks", href:"/add-books",icon:BookUserIcon
         }:
+         {
+            name:"Users", href:"/users",icon:UserIcon
+        },
+        {
+            name:"AddUsers", href:"/add-users",icon: Users
+        },
+        
         
         
         

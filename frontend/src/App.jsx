@@ -5,6 +5,9 @@ import LoginLoading from './pages/LoginLoading'
 import Home from './pages/Home'
 import Layout from './pages/Layout'
 import Dashboard from './pages/Dashboard'
+import AddBookForm from './pages/AddBooks'
+import AddBooks from './pages/AddBooks'
+import AddUsers from './pages/AddUsers'
 
 const App = () => {
   return (
@@ -17,6 +20,8 @@ const App = () => {
 
       <Route   element={<Layout/>}>
       <Route path='/dashboard' element={<Dashboard/>} />
+      <Route path='/add-books' element={<AddBooks/>} />
+      <Route path='/add-users' element={<AddUsers/>} />
 
       </Route>
     </Routes>
